@@ -132,7 +132,6 @@ angular.module('public/js/app/users/templates/user-modal.html', []).run(['$templ
     '        <img ng-if="!user.id" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />\n' +
     '\n' +
     '        <form name="userForm" class="form-signin">\n' +
-    '\n' +
     '          <div class="form-group"  ng-class="{ \'has-error\': userForm.firstName.$dirty && userForm.firstName.$invalid, \'has-warning\': userForm.firstName.$pristine, \'has-success\': userForm.firstName.$valid }">\n' +
     '            <input type="text" class="form-control" placeholder="First Name" ng-model="user.firstName" name="firstName" required autofocus>\n' +
     '            <span ng-if="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-inline">This field is required</span>\n' +
@@ -149,7 +148,7 @@ angular.module('public/js/app/users/templates/user-modal.html', []).run(['$templ
     '          </div>\n' +
     '\n' +
     '          <div class="form-group" ng-class="{ \'has-error\': userForm.placeOfBirth.$dirty && userForm.placeOfBirth.$invalid, \'has-warning\': userForm.placeOfBirth.$pristine, \'has-success\': userForm.placeOfBirth.$valid  }">\n' +
-    '            <input type="text" class="form-control" placeholder="Place Of Birth" ng-model="user.placeOfBirth" required>\n' +
+    '            <input type="text" class="form-control" placeholder="Place Of Birth" ng-model="user.placeOfBirth" name="placeOfBirth" required>\n' +
     '            <span ng-if="userForm.placeOfBirth.$invalid && !userForm.placeOfBirth.$pristine" class="help-inline">This field is required</span>\n' +
     '          </div>\n' +
     '\n' +
