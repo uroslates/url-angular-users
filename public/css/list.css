@@ -1,0 +1,113 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+/* line 3, ../scss/list.scss */
+.panel > .list-group .list-group-item:first-child {
+  /*border-top: 1px solid rgb(204, 204, 204);*/
+}
+
+@media (max-width: 767px) {
+  /* line 7, ../scss/list.scss */
+  .visible-xs {
+    display: inline-block !important;
+  }
+
+  /* line 10, ../scss/list.scss */
+  .block {
+    display: block !important;
+    width: 100%;
+    height: 1px !important;
+  }
+}
+/* line 16, ../scss/list.scss */
+#back-to-bootsnipp {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* line 22, ../scss/list.scss */
+.c-search > .form-control {
+  border-radius: 0px;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  font-size: 1.3em;
+  padding: 12px 12px;
+  height: 44px;
+  outline: none !important;
+}
+
+/* line 31, ../scss/list.scss */
+.c-search > .form-control:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+/* line 36, ../scss/list.scss */
+.c-search > .input-group-btn .btn {
+  border-radius: 0px;
+  border-width: 0px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  height: 44px;
+}
+
+/* line 45, ../scss/list.scss */
+.c-list {
+  padding: 0px;
+  min-height: 44px;
+}
+
+/* line 49, ../scss/list.scss */
+.title {
+  display: inline-block;
+  font-size: 1.7em;
+  font-weight: bold;
+  padding: 5px 15px;
+}
+
+/* line 55, ../scss/list.scss */
+ul.c-controls {
+  list-style: none;
+  margin: 0px;
+  min-height: 44px;
+}
+
+/* line 61, ../scss/list.scss */
+ul.c-controls li {
+  margin-top: 8px;
+  float: left;
+}
+
+/* line 66, ../scss/list.scss */
+ul.c-controls li a {
+  font-size: 1.7em;
+  padding: 11px 10px 6px;
+}
+
+/* line 70, ../scss/list.scss */
+ul.c-controls li a i {
+  min-width: 24px;
+  text-align: center;
+}
+
+/* line 75, ../scss/list.scss */
+ul.c-controls li a:hover {
+  background-color: rgba(51, 51, 51, 0.2);
+}
+
+/* line 79, ../scss/list.scss */
+.c-toggle {
+  font-size: 1.7em;
+}
+
+/* line 83, ../scss/list.scss */
+.name {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+/* line 88, ../scss/list.scss */
+.c-info {
+  padding: 5px 10px;
+  font-size: 1.25em;
+}

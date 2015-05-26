@@ -1,0 +1,61 @@
+<div class="modal-header">
+    <h3 class="modal-title">
+      <span ng-if="user.id">Edit User</span>
+      <span ng-if="!user.id">Add User</span>
+    </h3>
+</div>
+<div class="modal-body">
+
+    <div class="card card-container">
+        <img ng-if="user.id" class="profile-img-card" ng-src="{{user.avatar}}" />
+        <img ng-if="!user.id" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+
+        <form name="userForm" class="form-signin">
+
+          <div class="form-group"  ng-class="{ 'has-error': userForm.firstName.$dirty && userForm.firstName.$invalid, 'has-warning': userForm.firstName.$pristine, 'has-success': userForm.firstName.$valid }">
+            <input type="text" class="form-control" placeholder="First Name" ng-model="user.firstName" name="firstName" required autofocus>
+            <span ng-if="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error': userForm.lastName.$dirty && userForm.lastName.$invalid, 'has-warning': userForm.lastName.$pristine, 'has-success': userForm.lastName.$valid }">
+            <input type="text" class="form-control" placeholder="Last Name" ng-model="user.lastName" name="lastName" required>
+            <span ng-if="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error':  userForm.email.$dirty && userForm.email.$invalid, 'has-warning': userForm.email.$pristine, 'has-success': userForm.lastName.$valid  }">
+            <input type="email" class="form-control" placeholder="Email address" ng-model="user.email" name="email" required>
+            <span ng-if="userForm.email.$invalid && !userForm.email.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error': userForm.placeOfBirth.$dirty && userForm.placeOfBirth.$invalid, 'has-warning': userForm.placeOfBirth.$pristine, 'has-success': userForm.placeOfBirth.$valid  }">
+            <input type="text" class="form-control" placeholder="Place Of Birth" ng-model="user.placeOfBirth" required>
+            <span ng-if="userForm.placeOfBirth.$invalid && !userForm.placeOfBirth.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Phone" ng-model="user.phone">
+            <span ng-if="userForm.phone.$invalid && !userForm.phone.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Website" ng-model="user.website">
+            <span ng-if="userForm.website.$invalid && !userForm.website.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error': userForm.username.$dirty && userForm.username.$invalid, 'has-warning': userForm.username.$pristine, 'has-success': userForm.username.$success }">
+            <input type="text" class="form-control" placeholder="Username" ng-model="user.username" name="username" required>
+            <span ng-if="userForm.username.$invalid && !userForm.username.$pristine" class="help-inline">This field is required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Age" ng-model="user.age">
+          </div>
+
+        </form>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="save(user)" ng-disabled="userForm.$invalid">Save</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+</div>

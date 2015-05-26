@@ -1,0 +1,59 @@
+{
+  "generator-urlangular": {
+    "appName": "urlangular-app",
+    "features": [
+      "users"
+    ],
+    "history": [
+      {
+        "feature": {
+          "name": "users"
+        }
+      },
+      {
+        "service": {
+          "name": "UsersService",
+          "featureName": "users",
+          "moduleName": "urlangular-app.users.services",
+          "isScaffoldCrud": "y",
+          "restResourceIdentifiers": [
+            "id"
+          ],
+          "restResourceUrl": "http://jsonplaceholder.typicode.com/users/:id"
+        }
+      },
+      {
+        "controller": {
+          "name": "UsersController",
+          "isScaffoldCrud": "y",
+          "listControllerName": "UsersListController",
+          "detailsControllerName": "UsersDetailsController",
+          "serviceName": "UsersService",
+          "restResourceIdentifiers": [
+            "id"
+          ],
+          "featureName": "users",
+          "moduleName": "urlangular-app.users.controllers"
+        }
+      },
+      {
+        "route": {
+          "routeName": "base.users-list",
+          "routeUrl": "/users",
+          "controller": "UsersListController",
+          "templateUrl": "public/js/app/users/templates/list.html",
+          "isListPage": true
+        }
+      },
+      {
+        "route": {
+          "routeName": "base.users-details",
+          "routeUrl": "/users/:id",
+          "controller": "UsersDetailsController",
+          "templateUrl": "public/js/app/users/templates/details.html",
+          "isListPage": false
+        }
+      }
+    ]
+  }
+}
