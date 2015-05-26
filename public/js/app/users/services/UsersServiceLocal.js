@@ -17,7 +17,7 @@ angular.module('urlangular-app.users.services')
           });
         },
 
-        saveOrUpdate(user) {
+        saveOrUpdate: function (user) {
           if (!user.id) {
             return this.save(user);
           } else {
